@@ -5,7 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.paper-badges',
   'myApp.paper-badge',
-  'myApp.view2',
+  'myApp.zpl-badges',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
