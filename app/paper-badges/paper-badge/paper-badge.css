@@ -15,7 +15,7 @@
 .badge.front {
     border: 1mm solid #007aba;
     box-sizing: border-box;
-    background: url("/paper-badges/paper-badge/images/mwp-logo.svg"), linear-gradient(0deg, rgba(0, 122, 186, 1) 0%, rgba(0, 122, 186, 1) 22%, rgba(255, 255, 255, 1) 22%);
+    background: url("./images/mwp-logo.svg"), linear-gradient(0deg, rgba(0, 122, 186, 1) 0%, rgba(0, 122, 186, 1) 22%, rgba(255, 255, 255, 1) 22%);
     background-position: bottom 1mm left 1mm, bottom;
     background-size: auto 0.8cm, auto;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@
     width: 2.5cm !important;
 }
 .badge.rear {
-    background: url("/paper-badges/paper-badge/images/placement-diagram.svg");
+    background: url("./images/placement-diagram.svg");
     background-position: bottom left 5mm;
     background-size: 2.5cm;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: url("/paper-badges/paper-badge/images/badge-fold.svg");
+    background: url("./images/badge-fold.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 27.3cm auto;
@@ -88,5 +88,5 @@
     display: flex;
     align-self: center;
     margin-left: 2cm;
-    background: url("/paper-badges/paper-badge/images/warning.svg");
+    background: url("./images/warning.svg");
 }
