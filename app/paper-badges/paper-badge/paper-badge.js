@@ -9,7 +9,7 @@ angular.module('myApp.paper-badge', ['ngRoute'])
 //   });
 // }])
 .component("paperBadge", {
-  templateUrl:'paper-badge/paper-badge.html',
+  templateUrl:'paper-badges/paper-badge/paper-badge.html',
   controller: 'paper-badgeCtrl'
 })
 .controller('paper-badgeCtrl', [function() {
