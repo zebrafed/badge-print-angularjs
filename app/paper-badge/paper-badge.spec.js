@@ -8,8 +8,8 @@ describe('myApp.paper-badge module', function() {
 
     it('should ....', inject(function($controller) {
       //spec body
-      var paper-badgeCtrl = $controller('paper-badgeCtrl');
-      expect(paper-badgeCtrl).toBeDefined();
+      var paperbadgeCtrl = $controller('paper-badgeCtrl');
+      expect(paperbadgeCtrl).toBeDefined();
     }));
 
   });
