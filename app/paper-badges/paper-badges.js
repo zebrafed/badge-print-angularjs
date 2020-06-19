@@ -9,6 +9,8 @@ angular.module('myApp.paper-badges',  ['ngRoute'])
   });
 }])
 
-.controller('paper-badgesCtrl', [function() {
-  
+.controller('paper-badgesCtrl', ['$scope','$location',  function($scope, $location) {
+    var data = $location.search().data;
+    $scope.data = JSON.parse(data);
+    console.log($scope.data[0])
 }]);

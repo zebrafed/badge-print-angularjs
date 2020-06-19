@@ -1,5 +1,5 @@
-<paper-badge></paper-badge>
-<paper-badge></paper-badge>
-<paper-badge></paper-badge>
-<p>paper badges works</p>
+<p>{{data}}</p>
+<div ng-repeat="user in data track by user.un">
+    <paper-badge user = user></paper-badge>
+</div>
 <script src="/paper-badges/paper-badge/paper-badge.js"></script>
