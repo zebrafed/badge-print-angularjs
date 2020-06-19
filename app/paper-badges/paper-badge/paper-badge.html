@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="badge front">
             <h1 class="username">{{ $ctrl.user.un }}</h1>
-               <canvas class="qrCode" id="canvasId"></canvas>
+               <canvas class="qrCode" ng-attr-id="{{'canvas'+$ctrl.user.id}}"></canvas>
 
         </div>
         <div class="badge rear">

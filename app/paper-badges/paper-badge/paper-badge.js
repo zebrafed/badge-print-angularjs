@@ -2,13 +2,6 @@
 
 angular
   .module('myApp.paper-badge', ['ngRoute'])
-
-  // .config(['$routeProvider', function($routeProvider) {
-  //   $routeProvider.when('/paper-badge', {
-  //     templateUrl: 'paper-badge/paper-badge.html',
-  //     controller: 'paper-badgeCtrl'
-  //   });
-  // }])
   .component('paperBadge', {
     templateUrl: 'paper-badges/paper-badge/paper-badge.html',
     controller: 'paper-badgeCtrl',
@@ -17,12 +10,13 @@ angular
     },
   })
   .controller('paper-badgeCtrl', [
-    function () {
-      const qrdata = `zmwprox1://{id:"1234","un":"Mike"}`;
-      //TODO: make data change
+    '$scope',
+    function ($scope) {
       angular.element(document).ready(function () {
-        let canvas = document.getElementById('canvasId');
-        //TODO: generate custom canvas ID
+        const un = $scope.$ctrl.user.un;
+        const id = $scope.$ctrl.user.id;
+        const qrdata = `zmwprox1://{id:"${id}",un:"${un}"}`;
+        let canvas = document.getElementById(`canvas${id}`);
         QRCode.toCanvas(canvas, qrdata, { margin: 0 }, (error) => {
           if (error) {
             console.error(error);
@@ -31,30 +25,3 @@ angular
       });
     },
   ]);
-// =======
-//   // .config(['$routeProvider', function($routeProvider) {
-//   //   $routeProvider.when('/paper-badge', {
-//   //     templateUrl: 'paper-badge/paper-badge.html',
-//   //     controller: 'paper-badgeCtrl'
-//   //   });
-//   // }])
-//   .component('paperBadge', {
-//     templateUrl: 'paper-badges/paper-badge/paper-badge.html',
-//     controller: 'paper-badgeCtrl',
-//   })
-//   .controller('paper-badgeCtrl', [
-//     function () {
-//       const qrdata = `zmwprox1://{id:"1234","un":"Mike"}`;
-//       //TODO: make data change
-//       angular.element(document).ready(function () {
-//         let canvas = document.getElementById('canvasId');
-//         //TODO: generate custom canvas ID
-//         QRCode.toCanvas(canvas, qrdata, { margin: 0 }, (error) => {
-//           if (error) {
-//             console.error(error);
-//           }
-//         });
-//       });
-//     },
-//   ]);
-// >>>>>>> Added QR codes to paper-badge
