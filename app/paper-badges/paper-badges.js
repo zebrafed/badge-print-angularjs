@@ -23,3 +23,4 @@ angular
   ]);
 
 // http://localhost:8000/#!/paper-badges?data=%5B%7B%22id%22:%221234%22,%22un%22:%22Ben%22%7D%5D
+// http://localhost:8000/#!/paper-badges?data=[{"un":"ben","id":"123412341234"},{"un":"jamie","id":"0947739292"},{"un":"Louis","id":"lkajdsfhlaksjf"}]
