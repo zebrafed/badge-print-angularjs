@@ -1,92 +1,98 @@
 @media print {
-    @page {
-        size: landscape;
-   }
-    html, body {
-        height: 100%;
-   }
+  @page {
+    size: landscape;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
 }
 .badge {
-    width: 8cm;
-    height: 5.3cm;
-    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
-    box-sizing: border-box;
+  width: 8cm;
+  height: 5.3cm;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  box-sizing: border-box;
 }
 .badge.front {
-    border: 1mm solid #007aba;
-    box-sizing: border-box;
-    background: url("./images/mwp-logo.svg"), linear-gradient(0deg, rgba(0, 122, 186, 1) 0%, rgba(0, 122, 186, 1) 22%, rgba(255, 255, 255, 1) 22%);
-    background-position: bottom 1mm left 1mm, bottom;
-    background-size: auto 0.8cm, auto;
-    background-repeat: no-repeat;
-    color-adjust: exact;
-    text-align: center;
+  border: 1mm solid #007aba;
+  box-sizing: border-box;
+  background: url('./images/mwp-logo.svg'),
+    linear-gradient(0deg, rgba(0, 122, 186, 1) 0%, rgba(0, 122, 186, 1) 22%, rgba(255, 255, 255, 1) 22%);
+  background-position: bottom 1mm left 1mm, bottom;
+  background-size: auto 0.8cm, auto;
+  background-repeat: no-repeat;
+  color-adjust: exact;
+  text-align: center;
 }
 .badge .qrCode {
-    height: 2.5cm !important;
-    width: 2.5cm !important;
+  height: 2.5cm !important;
+  width: 2.5cm !important;
 }
 .badge.rear {
-    background: url("./images/placement-diagram.svg");
-    background-position: bottom left 5mm;
-    background-size: 2.5cm;
-    background-repeat: no-repeat;
-    color-adjust: exact;
+  background: url('./images/placement-diagram.svg');
+  background-position: bottom left 5mm;
+  background-size: 2.5cm;
+  background-repeat: no-repeat;
+  color-adjust: exact;
 }
 .badge.rear h1 {
-    text-align: center;
-    font-size: 12pt;
-    line-height: 1.5;
-    font-weight: normal;
-    margin: 2mm 4mm 1.5mm 4mm;
+  text-align: center;
+  font-size: 12pt;
+  line-height: 1.5;
+  font-weight: normal;
+  margin: 2mm 4mm 1.5mm 4mm;
 }
 .badge.rear li {
-    font-size: 10pt;
-    margin-right: 0.25cm;
+  font-size: 10pt;
+  margin-right: 0.25cm;
 }
 .badge.rear li + li {
-    margin-top: 4pt;
+  margin-top: 4pt;
 }
 .badge.rear ul {
-    margin: 2mm 0;
+  margin: 2mm 0;
 }
 .username {
-    font-size: 21.75pt;
-    font-weight: bold;
-    line-height: 1;
-    margin: 0;
-    padding: 0.2cm 0;
-    text-transform: uppercase;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 8cm;
-    min-width: 0;
+  font-size: 21.75pt;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0.2cm 0;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 8cm;
+  min-width: 0;
 }
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 16cm;
+  display: flex;
+  flex-direction: row;
+  width: 16cm;
 }
 .info {
-    margin-left: 35%;
+  margin-left: 35%;
 }
 .outer-wrapper {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: url("./images/badge-fold.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 27.3cm auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url('./images/badge-fold.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 27.3cm auto;
 }
 .alert-icon {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-self: center;
-    margin-left: 2cm;
-    background: url("./images/warning.svg");
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-self: center;
+  margin-left: 2cm;
+  background: url('./images/warning.svg');
 }

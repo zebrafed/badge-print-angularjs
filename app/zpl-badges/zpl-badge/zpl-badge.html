@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="zpl-badges/zpl-badge/zpl-badge.css" />
+
+<div class="border">
+  <div class="container">
+    <h2>ZPL Print</h2>
+    <!-- <p>{{data[0]}}</p> -->
+
+    <div class="row">
+      <h3>Select Printer:</h3>
+      {{$ctrl.printers}}
+      <div ng-if="printers">
+        <select>
+          <!-- <select (change)="handle($event.target.selectedIndex)"> -->
+          <option ng-repeat="let item of printers">{{ item.name }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div ng-if="!loadingPrinters && showUI" class="border" [ngClass]="{ error: canPrint === false }">
+  <div class="container">
+    <h2>ZPL Print</h2>
+    <div ng-if="canPrint; else error">
+      <div class="row">
+        <h3>Select Printer:</h3>
+        <select (change)="handle($event.target.selectedIndex)">
+          <option *ngFor="let item of printers">{{ item.name }}</option>
+        </select>
+      </div>
+
+      <ul>
+        <li *ngFor="let item of data">{{ item.un }}</li>
+      </ul>
+    </div>
+    <ng-template #error>
+      <h3 *ngIf="printers.length < 1 && data.l6ength < 1; else singleError">
+        The following errors have occurred:
+      </h3>
+      <ng-template #singleError>
+        <h3>
+          The following error has occurred:
+        </h3>
+      </ng-template>
+      <ul>
+        <li ng-if="printers.length < 1">
+          No compatible printers detected.
+        </li>
+        <li ng-if="data.length < 1">
+          No valid data provided
+        </li>
+      </ul>
+    </ng-template>
+  </div>
+  <div class="buttonContainer">
+    <div ng-if="canPrint; else refreshButton" class="row end">
+      <button (click)="sendToPrinter()" [disabled]="!buttonEnabled">
+        {{ printed ? "Print badges again" : "Print badges" }}
+      </button>
+    </div>
+    <ng-template #refreshButton>
+      <div class="row end">
+        <button onclick="window.location.reload()">
+          Refresh
+        </button>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<mat-spinner ng-if="loadingPrinters"></mat-spinner> -->

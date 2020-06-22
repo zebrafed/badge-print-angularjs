@@ -1,0 +1,102 @@
+.border {
+  padding: 0;
+  width: 400px;
+  display: flex;
+  border: 6px solid #007aba;
+  flex-direction: column;
+  background: white;
+  color: #4c4c4c;
+  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}
+.border .container {
+  padding: 20px;
+}
+.border h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.border h3 {
+  margin: 6px;
+}
+.border .row {
+  flex-direction: row;
+  display: flex;
+}
+.border .row select {
+  margin: 10px;
+  width: 140px;
+  border-radius: 0;
+  height: 20px;
+  border: 2px solid #aaa;
+}
+.border .row select:active {
+  margin: 10px;
+  width: 140px;
+  border-radius: 0;
+  height: 20px;
+  border: 2px solid #aaa;
+}
+.border .row.iconRow {
+  justify-content: space-between;
+}
+.border button {
+  align-self: flex-end;
+}
+.border .end {
+  justify-content: flex-end;
+}
+.border .icon:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 1s all;
+}
+.border .buttonContainer {
+  padding-top: 6px;
+  background-color: #007aba;
+}
+.border .buttonContainer button {
+  width: 200px;
+  height: 40px;
+  padding: 6px;
+  border-radius: 0;
+  transition: 0.2s all;
+  border: 2px solid white;
+  background-color: #007aba;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}
+.border .buttonContainer button:hover {
+  background-color: #069ee1;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.border .buttonContainer button:focus {
+  border: 1px solid white;
+  border-radius: 0;
+  outline: none;
+}
+.border .buttonContainer button:active {
+  background-color: #0cacf0;
+}
+.border .buttonContainer button:disabled {
+  background-color: #c8c8c8;
+  cursor: default;
+}
+
+.border.error {
+  border-color: #ed1c24;
+}
+.border.error .buttonContainer {
+  background-color: #ed1c24;
+}
+.border.error .buttonContainer button {
+  background-color: #4c4c4c;
+}
+.border.error .buttonContainer button:hover {
+  background-color: #6c6c6c;
+}
+.border.error .buttonContainer button:active {
+  background-color: #808080;
+}
