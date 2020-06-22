@@ -8,13 +8,19 @@ angular
     function ($routeProvider) {
       $routeProvider.when('/zpl-badges', {
         templateUrl: 'zpl-badges/zpl-badges.html',
-        controller: 'zplBadgesCtrl',
+        controller: 'zpl-badgesCtrl',
       });
     },
   ])
 
-  .controller('zplBadgesCtrl', [
-    function () {
-      console.log('Do stuff!');
+  .controller('zpl-badgesCtrl', [
+    '$scope',
+    '$location',
+    function ($scope, $location) {
+      var data = $location.search().data;
+      if (!data) data = '[{"un":"Ben","id":"1234"}]';
+      $scope.data = JSON.parse(data);
     },
   ]);
+
+// http://localhost:8000/#!/zpl-badges?data=%5B%7B%22id%22:%221234%22,%22un%22:%22Ben%22%7D%5D
