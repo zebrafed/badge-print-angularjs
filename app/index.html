@@ -11,12 +11,8 @@
     <title>Badge Print</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css" />
-    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css" /> -->
-    <!-- <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script> -->
-    <link rel="stylesheet" href="app.css" />
   </head>
-  <body>
+  <body style="height: 100%; margin: 0;">
     <!--
     <ul class="menu">
        <li><a href="#!/zpl-badges">ZPL Badges</a></li>
@@ -30,7 +26,7 @@
       </p>
     <![endif]-->
 
-    <div ng-view></div>
+    <div ng-view style="height: 100%;"></div>
 
     <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -42,9 +38,6 @@
     <script src="paper-badges/paper-badge/paper-badge.js"></script>
     <script src="zpl-badges/zpl-badge/zpl-badge.js"></script>
     <script src="zpl-badges/zpl-badges.js"></script>
-    <!-- <script src="core/version/version.js"></script>
-    <script src="core/version/version-directive.js"></script>
-    <script src="core/version/interpolate-filter.js"></script> -->
     <script src="lib/qrcode/build/qrcode.min.js"></script>
     <script src="lib/browser-print/BrowserPrint-3.0.216.min.js"></script>
   </body>

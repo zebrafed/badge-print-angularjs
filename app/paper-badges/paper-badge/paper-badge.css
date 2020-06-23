@@ -6,10 +6,6 @@
   body {
     height: 100%;
   }
-  * {
-    -webkit-print-color-adjust: exact !important;
-    color-adjust: exact !important;
-  }
 }
 .badge {
   width: 8cm;
@@ -20,8 +16,7 @@
 .badge.front {
   border: 1mm solid #007aba;
   box-sizing: border-box;
-  background: url('./images/mwp-logo.svg'),
-    linear-gradient(0deg, rgba(0, 122, 186, 1) 0%, rgba(0, 122, 186, 1) 22%, rgba(255, 255, 255, 1) 22%);
+  background: url('./images/mwp-logo.svg'), linear-gradient(0deg, #007aba 0%, #007aba 22%, white 22%);
   background-position: bottom 1mm left 1mm, bottom;
   background-size: auto 0.8cm, auto;
   background-repeat: no-repeat;
@@ -32,7 +27,13 @@
   height: 2.5cm !important;
   width: 2.5cm !important;
 }
+
 .badge.rear {
+  background: url('/images/placement-diagram.svg');
+  background-position: bottom left 5mm;
+  background-size: 2.5cm;
+  background-repeat: no-repeat;
+  color-adjust: exact;
   background: url('./images/placement-diagram.svg');
   background-position: bottom left 5mm;
   background-size: 2.5cm;
@@ -56,6 +57,7 @@
 .badge.rear ul {
   margin: 2mm 0;
 }
+
 .username {
   font-size: 21.75pt;
   font-weight: bold;
@@ -69,14 +71,17 @@
   max-width: 8cm;
   min-width: 0;
 }
+
 .wrapper {
   display: flex;
   flex-direction: row;
   width: 16cm;
 }
+
 .info {
   margin-left: 35%;
 }
+
 .outer-wrapper {
   align-items: center;
   justify-content: center;
@@ -88,6 +93,7 @@
   background-position: center;
   background-size: 27.3cm auto;
 }
+
 .alert-icon {
   height: 40px;
   width: 40px;
