@@ -3,22 +3,22 @@
 <div class="border">
   <div class="container">
     <h2>ZPL Print</h2>
-    <!-- <p>{{data[0]}}</p> -->
-
-    <div class="row">
+    <p>Current functionality is very basic</p>
+    <p>Will print to first printer it finds</p>
+    <!-- <div class="row">
       <h3>Select Printer:</h3>
       {{$ctrl.printers}}
-      <div ng-if="printers">
+      <div ng-if="$ctrl.printers">
         <select>
-          <!-- <select (change)="handle($event.target.selectedIndex)"> -->
-          <option ng-repeat="let item of printers">{{ item.name }}</option>
+          <select (change)="handle($event.target.selectedIndex)">
+          <option ng-repeat="let item of $ctrl.printers">{{ item.name }}</option>
         </select>
       </div>
     </div>
+  </div> -->
   </div>
-</div>
 
-<!-- 
+  <!-- 
 <div ng-if="!loadingPrinters && showUI" class="border" [ngClass]="{ error: canPrint === false }">
   <div class="container">
     <h2>ZPL Print</h2>
@@ -69,3 +69,4 @@
   </div>
 </div>
 <mat-spinner ng-if="loadingPrinters"></mat-spinner> -->
+</div>
