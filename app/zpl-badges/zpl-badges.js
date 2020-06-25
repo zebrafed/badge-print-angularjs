@@ -17,9 +17,9 @@ angular
     '$scope',
     '$location',
     function ($scope, $location) {
-      var data = $location.search().data;
-      if (!data) data = '[{"un":"Ben","id":"1234"}]';
-      $scope.data = JSON.parse(data);
+      var data = $location.search.data ? JSON.parse($location.search().data) : [{ un: 'NO USERNAME', id: '' }];
+      // if (!data) data = [{ un: 'NO USERNAME', id: '' }];
+      $scope.data = data;
     },
   ]);
 

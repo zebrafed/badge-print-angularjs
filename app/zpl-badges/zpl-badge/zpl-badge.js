@@ -34,14 +34,13 @@ angular
         Promise.all([defaultPromise, localPromise])
           .then((val) => {
             if (val[1]) {
-              $scope.$ctrl.printers = val[1];
+              $scope.printers = val[1];
             }
             if (val[0][name]) {
-              $scope.$ctrl.printers.push(val[0]);
+              $scope.printers.push(val[0]);
             }
-            if ($scope.$ctrl.printers) {
-              printBadges();
-            }
+            console.log(val);
+            $scope.$apply();
           })
           .catch((e) => {
             console.error(e);
@@ -49,7 +48,6 @@ angular
       }
 
       function printBadges() {
-        console.log('ready to print');
         $scope.$ctrl.data.forEach((x) => {
           printBadge(x.un, x.id);
         });
@@ -76,7 +74,7 @@ angular
 
         //TODO: revert this
         try {
-          $scope.$ctrl.printers[0].send(data, null, () => {
+          $scope.printers[0].send(data, null, () => {
             console.error('Printer Error');
           });
           console.log('printed this:\n' + data);
@@ -129,6 +127,15 @@ angular
         }
         // return: [QR horizontal offset, magnification]
       }
+
+      $scope.handlePrintButton = function () {
+        if ($scope.printers) {
+          printBadges();
+        } else {
+          alert('No printer found');
+        }
+      };
+
       angular.element(document).ready(function () {
         findPrinters();
       });
