@@ -3,9 +3,11 @@
 <div class="border">
   <div class="container">
     <div ng-hide="printers" class="loading"><h2>Loading</h2></div>
-    <div ng-hide="printers.length !== 0">
+    <div ng-hide="!printers">
       <h2>ZPL Print</h2>
-      <select ng-model="printers" ng-options="item.name for item in printers"> </select>
+      <select ng-model="selectedPrinter.value">
+        <option ng-selected="0" ng-repeat="item in printers" ng-value="{{$index}}">{{item.name}}</option>
+      </select>
       <button ng-click="handlePrintButton()">CLICK</button>
     </div>
   </div>

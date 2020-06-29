@@ -33,13 +33,17 @@ angular
 
         Promise.all([defaultPromise, localPromise])
           .then((val) => {
-            if (val[1]) {
+            $scope.printers = [];
+            if (val[0].name) {
               $scope.printers = val[1];
             }
-            if (val[0][name]) {
-              $scope.printers.push(val[0]);
+            if (val[1]) {
+              val[1].forEach((e) => {
+                if (e.name) {
+                  $scope.printers.push(e);
+                }
+              });
             }
-            console.log(val);
             $scope.$apply();
           })
           .catch((e) => {
@@ -71,10 +75,9 @@ angular
 ^PQ1,0,1,Y
 ^XZ
   `;
-
         //TODO: revert this
         try {
-          $scope.printers[0].send(data, null, () => {
+          $scope.printers[$scope.selectedPrinter.value].send(data, null, () => {
             console.error('Printer Error');
           });
           console.log('printed this:\n' + data);
