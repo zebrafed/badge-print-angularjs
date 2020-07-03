@@ -12,8 +12,20 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
+  <style>
+    .header {
+      justify-content: center;
+      display: flex;
+    }
+
+    @media print {
+      .header, hr {
+        display: none;
+      }
+    }
+  </style>
   <body style="height: 100%; margin: 0;">
-    <div style="justify-content: center; display: flex;">
+    <div class="header">
       <a style="padding: 10px;" href="#!/zpl-badges">ZPL Badges</a>
       <a style="padding: 10px;" href="#!/paper-badges">PDF Badges</a>
     </div>

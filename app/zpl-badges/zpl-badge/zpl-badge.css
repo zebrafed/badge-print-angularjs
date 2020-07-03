@@ -6,9 +6,10 @@
   flex-direction: column;
   background: white;
   color: #4c4c4c;
-  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
 }
-.border .container {
+.container {
   padding: 20px;
 }
 .border h2 {
@@ -55,9 +56,10 @@
   background-color: #007aba;
 }
 .border .buttonContainer button {
-  width: 200px;
+  width: 160px;
   height: 40px;
   padding: 6px;
+  margin-left: 12px;
   border-radius: 0;
   transition: 0.2s all;
   border: 2px solid white;
@@ -65,7 +67,8 @@
   font-weight: bold;
   font-size: 1rem;
   color: white;
-  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
 }
 .border .buttonContainer button:hover {
   background-color: #069ee1;
@@ -99,4 +102,12 @@
 }
 .border.error .buttonContainer button:active {
   background-color: #808080;
+}
+.border.error .buttonContainer button:disabled {
+  background-color: #c8c8c8;
+  cursor: default;
+}
+
+.border.error .buttonContainer button:disabled:hover {
+  background-color: #c8c8c8;
 }

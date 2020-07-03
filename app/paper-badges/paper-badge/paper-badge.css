@@ -7,6 +7,13 @@
     height: 100%;
   }
 }
+/* TODO: tagnos background graphics not printing  */
+
+* {
+  /* -webkit-print-color-adjust: exact !important; */
+  /* color-adjust: exact !important; */
+}
+
 .badge {
   width: 8cm;
   height: 5.3cm;
@@ -20,7 +27,6 @@
   background-position: bottom 1mm left 1mm, bottom;
   background-size: auto 0.8cm, auto;
   background-repeat: no-repeat;
-  color-adjust: exact;
   text-align: center;
 }
 .badge .qrCode {
@@ -29,16 +35,10 @@
 }
 
 .badge.rear {
-  background: url('/images/placement-diagram.svg');
-  background-position: bottom left 5mm;
-  background-size: 2.5cm;
-  background-repeat: no-repeat;
-  color-adjust: exact;
   background: url('./images/placement-diagram.svg');
   background-position: bottom left 5mm;
   background-size: 2.5cm;
   background-repeat: no-repeat;
-  color-adjust: exact;
 }
 .badge.rear h1 {
   text-align: center;

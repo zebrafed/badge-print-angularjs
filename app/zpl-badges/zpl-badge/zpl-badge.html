@@ -1,14 +1,39 @@
 <link rel="stylesheet" href="zpl-badges/zpl-badge/zpl-badge.css" />
 
-<div class="border">
-  <div class="container">
-    <div ng-hide="printers" class="loading"><h2>Loading</h2></div>
-    <div ng-hide="!printers">
-      <h2>ZPL Print</h2>
-      <select ng-model="selectedPrinter.value">
-        <option ng-selected="0" ng-repeat="item in printers" ng-value="{{$index}}">{{item.name}}</option>
-      </select>
-      <button ng-click="handlePrintButton()">CLICK</button>
+<div ng-class="{error: props.error.length > 0, border: true}">
+  <div ng-hide="!props.loading" class="loading container"><h2>Loading</h2></div>
+  <div ng-hide="props.loading">
+    <div ng-hide="props.error.length > 0">
+      <div class="container">
+        <h2>ZPL Print</h2>
+        <div class="row">
+          <h3>Select Printer:</h3>
+          <select ng-model="props.selectedPrinter" ng-init="props.selectedPrinter = 0">
+            <option ng-selected="0" ng-repeat="item in props.printers" ng-value="{{$index}}">{{item.name}}</option>
+          </select>
+        </div>
+        <ul>
+          <li ng-repeat="item in $ctrl.data">{{ item.un }}</li>
+        </ul>
+      </div>
+    </div>
+    <div ng-show="props.error.length > 0" class="container">
+      <h2>
+        Error
+      </h2>
+      <ul>
+        <li ng-repeat="err in props.error">{{err}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="buttonContainer" ng-hide="props.loading">
+    <div class="row end">
+      <button ng-click="findPrinters()">
+        Check for printers
+      </button>
+      <button ng-disabled="props.error.length > 0" ng-click="handlePrintButton()">
+        Print badges
+      </button>
     </div>
   </div>
 </div>
