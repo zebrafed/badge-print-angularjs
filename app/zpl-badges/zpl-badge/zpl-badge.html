@@ -11,6 +11,9 @@
           <select ng-model="props.selectedPrinter" ng-init="props.selectedPrinter = 0">
             <option ng-selected="0" ng-repeat="item in props.printers" ng-value="{{$index}}">{{item.name}}</option>
           </select>
+           <select ng-model="props.orientation" ng-init="props.orientation = 0">
+            <option ng-selected="0" ng-repeat="item in props.orientations" ng-value="{{$index}}">{{item.name}}</option>
+          </select>
         </div>
         <ul>
           <li ng-repeat="item in $ctrl.data">{{ item.un }}</li>
