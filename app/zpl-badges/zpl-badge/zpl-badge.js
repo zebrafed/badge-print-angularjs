@@ -22,12 +22,11 @@ angular
           dataToPrint += generateLabel(x.un, x.id);
         });
         try {
-          console.log(dataToPrint);
-          // $scope.props.printers[$scope.props.selectedPrinter].send(dataToPrint, null, (e) => {
-          //   console.error(e);
-          //   alert('Print failed. Please try again.');
-          // });
-          console.log('printed this:\n' + dataToPrint);
+          $scope.props.printers[$scope.props.selectedPrinter].send(dataToPrint, null, (e) => {
+             console.error(e);
+             alert('Print failed. Please try again.');
+           });
+          // console.log('printed this:\n' + dataToPrint);
         } catch (e) {
           alert('Print failed. Please try again.');
           console.error(e);
