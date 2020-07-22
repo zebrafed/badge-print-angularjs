@@ -22,6 +22,7 @@ angular
           dataToPrint += generateLabel(x.un, x.id);
         });
         try {
+          console.log(dataToPrint);
           // $scope.props.printers[$scope.props.selectedPrinter].send(dataToPrint, null, (e) => {
           //   console.error(e);
           //   alert('Print failed. Please try again.');
@@ -35,7 +36,7 @@ angular
 
       function generateLabel(un, id) {
         // Generates a single ZPL label to be sent to a printer
-        const orientation = $scope.props.orientation;
+        const orientation = parseInt($scope.props.orientation);
         const dataToEncode = `zmwprox1://{id:"${id}",un:"${un}"}`;
         const qrSizeOffset =
           orientation === 1
@@ -68,7 +69,7 @@ angular
       function getQrCodeOffsetValuePortrait(dataSize) {
         // Offset value to make sure Qr code is centered (ish) in badge
         if (dataSize < 42) {
-          return [232, 5];
+          return [425, 5];
         } else if (dataSize < 62) {
           return [425, 5];
         } else if (dataSize < 84) {
