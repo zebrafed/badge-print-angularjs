@@ -23,9 +23,9 @@ angular
         });
         try {
           $scope.props.printers[$scope.props.selectedPrinter].send(dataToPrint, null, (e) => {
-            console.error(e);
-            alert('Print failed. Please try again.');
-          });
+             console.error(e);
+             alert('Print failed. Please try again.');
+           });
           // console.log('printed this:\n' + dataToPrint);
         } catch (e) {
           alert('Print failed. Please try again.');
@@ -35,7 +35,7 @@ angular
 
       function generateLabel(un, id) {
         // Generates a single ZPL label to be sent to a printer
-        const orientation = $scope.props.orientation;
+        const orientation = parseInt($scope.props.orientation);
         const dataToEncode = `zmwprox1://{id:"${id}",un:"${un}"}`;
         const qrSizeOffset =
           orientation === 1
@@ -68,7 +68,7 @@ angular
       function getQrCodeOffsetValuePortrait(dataSize) {
         // Offset value to make sure Qr code is centered (ish) in badge
         if (dataSize < 42) {
-          return [232, 5];
+          return [425, 5];
         } else if (dataSize < 62) {
           return [425, 5];
         } else if (dataSize < 84) {
@@ -215,6 +215,7 @@ angular
         //When page has loaded, check for printer and check for errors
         $scope.props.loading = true;
         $scope.props.error = [];
+        // $scope.props.orientation = orientation.portrait;
         $scope.props.orientations = { 0: { name: 'Landscape' }, 1: { name: 'Portrait' } };
         if ($scope.$ctrl.data.length < 1) {
           $scope.props.error.push('No data to print');
