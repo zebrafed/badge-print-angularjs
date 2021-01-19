@@ -22,7 +22,7 @@ angular
         $scope.data = JSON.parse(data);
       } catch (e) {
         if (!$scope.data) {
-          $scope.data = [{ id: '', un: 'NO USERNAME' }];
+           $scope.data = [{ id: '', un: 'NO USERNAME' }];
         }
       }
     },

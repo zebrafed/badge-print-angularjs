@@ -4,7 +4,9 @@
 <div class="outer-wrapper">
   <div class="wrapper">
     <div class="badge front">
-      <h1 class="username">{{ $ctrl.user.un }}</h1>
+      <div class="username-container">
+        <h1 class="username" ng-attr-long="{{$ctrl.user.un.length > 12}}">{{ $ctrl.user.un }}</h1>
+      </div>
       <canvas class="qrCode" ng-attr-id="{{'canvas'+$ctrl.user.id}}"></canvas>
     </div>
     <div class="badge rear">

@@ -58,18 +58,35 @@
   margin: 2mm 0;
 }
 
+.username-container {
+  margin: 0;
+  padding: 0;
+  max-width: 8cm;
+  min-width: 0;
+  height: 1.165cm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .username {
   font-size: 21.75pt;
   font-weight: bold;
   line-height: 1;
-  margin: 0;
-  padding: 0.2cm 0;
   text-transform: uppercase;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  display: -webkit-box;
+  margin: 0;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   max-width: 8cm;
-  min-width: 0;
+  word-break: break-all;
+}
+
+.username[long="true"] {
+  font-size: 16pt;
+  white-space: normal;
 }
 
 .wrapper {
